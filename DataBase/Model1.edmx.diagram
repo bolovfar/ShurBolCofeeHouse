@@ -5,21 +5,21 @@
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
       <Diagram DiagramId="c5f7022b2bda4f1893fcb2fcf2497c67" Name="Diagram1">
-        <EntityTypeShape EntityType="CofeeHouseShurBolDBModel.Client" Width="1.5" PointX="3" PointY="4.875" IsExpanded="true" />
-        <EntityTypeShape EntityType="CofeeHouseShurBolDBModel.Gender" Width="1.5" PointX="0.75" PointY="5.5" IsExpanded="true" />
-        <EntityTypeShape EntityType="CofeeHouseShurBolDBModel.Position" Width="1.5" PointX="0.75" PointY="3" IsExpanded="true" />
-        <EntityTypeShape EntityType="CofeeHouseShurBolDBModel.Product" Width="1.5" PointX="5.25" PointY="9.125" IsExpanded="true" />
-        <EntityTypeShape EntityType="CofeeHouseShurBolDBModel.Staff" Width="1.5" PointX="3" PointY="0.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="CofeeHouseShurBolDBModel.sysdiagrams" Width="1.5" PointX="5.75" PointY="2.375" IsExpanded="true" />
-        <EntityTypeShape EntityType="CofeeHouseShurBolDBModel.Voucher" Width="1.5" PointX="5.25" PointY="5.125" IsExpanded="true" />
-        <EntityTypeShape EntityType="CofeeHouseShurBolDBModel.VoucherProduct" Width="1.5" PointX="7.5" PointY="5.375" IsExpanded="true" />
-        <AssociationConnector Association="CofeeHouseShurBolDBModel.FK__Client__IDGender__398D8EEE" ManuallyRouted="false" />
-        <AssociationConnector Association="CofeeHouseShurBolDBModel.FK__Voucher__IDClien__60A75C0F" ManuallyRouted="false" />
-        <AssociationConnector Association="CofeeHouseShurBolDBModel.FK__Staff__IDGender__5629CD9C" ManuallyRouted="false" />
-        <AssociationConnector Association="CofeeHouseShurBolDBModel.FK__Staff__IDPositio__5535A963" ManuallyRouted="false" />
-        <AssociationConnector Association="CofeeHouseShurBolDBModel.FK__VoucherPr__IDPro__656C112C" ManuallyRouted="false" />
-        <AssociationConnector Association="CofeeHouseShurBolDBModel.FK__Voucher__IDStaff__619B8048" ManuallyRouted="false" />
-        <AssociationConnector Association="CofeeHouseShurBolDBModel.FK__VoucherPr__IDVou__6477ECF3" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="CofeeHouseShurBolDBModel.Client" Width="2" PointX="3" PointY="7.25" />
+        <EntityTypeShape EntityType="CofeeHouseShurBolDBModel.Gender" Width="2" PointX="0.75" PointY="3.875" />
+        <EntityTypeShape EntityType="CofeeHouseShurBolDBModel.Position" Width="2" PointX="0.75" PointY="0.875" />
+        <EntityTypeShape EntityType="CofeeHouseShurBolDBModel.Product" Width="2" PointX="5.25" PointY="1.75" />
+        <EntityTypeShape EntityType="CofeeHouseShurBolDBModel.Staff" Width="2" PointX="3" PointY="3.125" />
+        <EntityTypeShape EntityType="CofeeHouseShurBolDBModel.sysdiagrams" Width="2" PointX="7.75" PointY="0.75" />
+        <EntityTypeShape EntityType="CofeeHouseShurBolDBModel.Voucher" Width="2" PointX="5.25" PointY="5.5" />
+        <EntityTypeShape EntityType="CofeeHouseShurBolDBModel.VoucherProduct" Width="2" PointX="7.5" PointY="5.75" />
+        <AssociationConnector Association="CofeeHouseShurBolDBModel.FK__Client__IDGender__398D8EEE" />
+        <AssociationConnector Association="CofeeHouseShurBolDBModel.FK__Voucher__IDClien__60A75C0F" />
+        <AssociationConnector Association="CofeeHouseShurBolDBModel.FK__Staff__IDGender__5629CD9C" />
+        <AssociationConnector Association="CofeeHouseShurBolDBModel.FK__Staff__IDPositio__5535A963" />
+        <AssociationConnector Association="CofeeHouseShurBolDBModel.FK__VoucherPr__IDPro__656C112C" />
+        <AssociationConnector Association="CofeeHouseShurBolDBModel.FK__Voucher__IDStaff__619B8048" />
+        <AssociationConnector Association="CofeeHouseShurBolDBModel.FK__VoucherPr__IDVou__6477ECF3" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

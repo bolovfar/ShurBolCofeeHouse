@@ -41,9 +41,10 @@ namespace ShurBolCofeeHouse.Pages
             Product product = new Product();
             product.Name = tboxAddProdName.Text;
             product.Description = tboxAddProdDesc.Text;
+            product.Cost = Convert.ToDecimal(tboxAddProdCost.Text);
             if (pathPhoto != null)
             {
-                product.Picture = File.ReadAllBytes(pathPhoto).ToString();
+                product.Picture = File.ReadAllBytes(pathPhoto);
             }
 
             Context.Product.Add(product);

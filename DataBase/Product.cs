@@ -23,7 +23,7 @@ namespace ShurBolCofeeHouse.DataBase
         public int IDProduct { get; set; }
         public string Name { get; set; }
         public decimal Cost { get; set; }
-        public string Picture { get; set; }
+        public byte[] Picture { get; set; }
         public string Description { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
