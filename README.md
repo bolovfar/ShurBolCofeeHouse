@@ -18,6 +18,9 @@
 ![image](https://user-images.githubusercontent.com/114148685/218982078-9bd82a3c-f898-4655-b779-833266bcee71.png)
 ![image](https://user-images.githubusercontent.com/114148685/218982285-cca2a64a-8ced-4ca9-a989-301a7ac2da00.png)
 
-
+Работа сох-я добавления продукта
+![image](https://user-images.githubusercontent.com/114148685/219851606-2fa69aa4-0595-47db-b8a9-7fb8f68496bc.png)
+![image](https://user-images.githubusercontent.com/114148685/219851701-8f867a35-7fa3-4515-8937-a57ebd4470fc.png)
+![image](https://user-images.githubusercontent.com/114148685/219851732-4a457c7f-8ab8-4f12-92a0-db1679f3f303.png)
 
 
