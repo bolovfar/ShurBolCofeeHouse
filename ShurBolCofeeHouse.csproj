@@ -113,9 +113,6 @@
     <Compile Include="Pages\AddProductPage.xaml.cs">
       <DependentUpon>AddProductPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Pages\AuthorizationPage.xaml.cs">
-      <DependentUpon>AuthorizationPage.xaml</DependentUpon>
-    </Compile>
     <Compile Include="Pages\CartPage.xaml.cs">
       <DependentUpon>CartPage.xaml</DependentUpon>
     </Compile>
@@ -124,9 +121,6 @@
     </Compile>
     <Compile Include="Pages\ProductPage.xaml.cs">
       <DependentUpon>ProductPage.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Pages\RegistrationPage.xaml.cs">
-      <DependentUpon>RegistrationPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Pages\StaffPage.xaml.cs">
       <DependentUpon>StaffPage.xaml</DependentUpon>
@@ -137,14 +131,13 @@
     <Compile Include="Windows\DirectorWindow.xaml.cs">
       <DependentUpon>DirectorWindow.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Windows\RegWindow.xaml.cs">
+      <DependentUpon>RegWindow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Windows\StaffWindow.xaml.cs">
       <DependentUpon>StaffWindow.xaml</DependentUpon>
     </Compile>
     <Page Include="Pages\AddProductPage.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Pages\AuthorizationPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -160,15 +153,11 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Pages\RegistrationPage.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
     <Page Include="Pages\StaffPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Windows\AuthRegWindow.xaml">
+    <Page Include="Windows\AuthWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
@@ -176,8 +165,8 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Windows\AuthRegWindow.xaml.cs">
-      <DependentUpon>AuthRegWindow.xaml</DependentUpon>
+    <Compile Include="Windows\AuthWindow.xaml.cs">
+      <DependentUpon>AuthWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
     <Page Include="Windows\ClientWindow.xaml">
@@ -185,6 +174,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Windows\DirectorWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\RegWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

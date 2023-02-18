@@ -10,29 +10,27 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
+
 using ShurBolCofeeHouse.Classes;
 using ShurBolCofeeHouse.DataBase;
 using static ShurBolCofeeHouse.Classes.EntityClass;
 
-namespace ShurBolCofeeHouse.Pages
+namespace ShurBolCofeeHouse.Windows
 {
     /// <summary>
-    /// Логика взаимодействия для RegistrationPage.xaml
+    /// Логика взаимодействия для RegWindow.xaml
     /// </summary>
-    public partial class RegistrationPage : Page
+    public partial class RegWindow : Window
     {
-        public RegistrationPage()
+        public RegWindow()
         {
             InitializeComponent();
 
             cmbGender.ItemsSource = Context.Gender.ToList();
             cmbGender.SelectedIndex = 0;
             cmbGender.DisplayMemberPath = "Name";
-
         }
-
         private void btnReg_Click(object sender, RoutedEventArgs e)
         {
             //Валидация
@@ -66,5 +64,6 @@ namespace ShurBolCofeeHouse.Pages
             Context.SaveChanges();
             MessageBox.Show("Успешно");
         }
+        //Можно добавить переход обратно на окно авторизации или срауз осущ-ть переход на страницу аккаунта
     }
 }

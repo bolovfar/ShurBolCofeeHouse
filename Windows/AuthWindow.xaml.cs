@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ShurBolCofeeHouse.Pages;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -15,26 +16,25 @@ using System.Windows.Shapes;
 using ShurBolCofeeHouse.Classes;
 using static ShurBolCofeeHouse.Classes.EntityClass;
 using ShurBolCofeeHouse.Windows;
-using ShurBolCofeeHouse.Pages;
 
-
-namespace ShurBolCofeeHouse.Pages
+namespace ShurBolCofeeHouse
 {
     /// <summary>
-    /// Логика взаимодействия для AuthorizationPage.xaml
+    /// Логика взаимодействия для MainWindow.xaml
     /// </summary>
-    public partial class AuthorizationPage : Page
+    public partial class MainWindow : Window
     {
-        public AuthorizationPage()
+        
+        public MainWindow()
         {
             InitializeComponent();
         }
-
         private void LbReg_MouseLeftButtonUp(object sender, MouseButtonEventArgs e)
         {
-            //Преход на окно регистрации.. Пока не работает, не видит фрейм.
-            MessageBox.Show("Переход");
-            //AuthRegFrame.Content = new RegistrationPage();
+            //Переход на окно регистрации
+            RegWindow regWindow = new RegWindow();
+            regWindow.Show();
+            this.Close();
         }
 
         private void btnAuth_Click(object sender, RoutedEventArgs e)
@@ -49,7 +49,7 @@ namespace ShurBolCofeeHouse.Pages
             {
                 MessageBox.Show("Неверный логин или пароль");
             }
-            
+
         }
     }
 }
