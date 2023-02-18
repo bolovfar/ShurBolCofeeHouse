@@ -39,9 +39,10 @@
             <PropertyRef Name="IDProduct" />
           </Key>
           <Property Name="IDProduct" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="IDType" Type="int" Nullable="false" />
           <Property Name="Name" Type="nvarchar" MaxLength="20" Nullable="false" />
           <Property Name="Cost" Type="decimal" Precision="6" Scale="2" Nullable="false" />
+          <Property Name="Picture" Type="nvarchar" MaxLength="100" />
+          <Property Name="Description" Type="nvarchar" MaxLength="200" />
         </EntityType>
         <EntityType Name="Staff">
           <Key>
@@ -66,13 +67,6 @@
           <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="version" Type="int" />
           <Property Name="definition" Type="varbinary(max)" />
-        </EntityType>
-        <EntityType Name="Type">
-          <Key>
-            <PropertyRef Name="IDType" />
-          </Key>
-          <Property Name="IDType" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="Name" Type="nvarchar" MaxLength="20" Nullable="false" />
         </EntityType>
         <EntityType Name="Voucher">
           <Key>
@@ -103,18 +97,6 @@
             </Principal>
             <Dependent Role="Client">
               <PropertyRef Name="IDGender" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK__Product__IDType__5DCAEF64">
-          <End Role="Type" Type="Self.Type" Multiplicity="1" />
-          <End Role="Product" Type="Self.Product" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="Type">
-              <PropertyRef Name="IDType" />
-            </Principal>
-            <Dependent Role="Product">
-              <PropertyRef Name="IDType" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -228,16 +210,11 @@
           <EntitySet Name="Product" EntityType="Self.Product" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Staff" EntityType="Self.Staff" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="Type" EntityType="Self.Type" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Voucher" EntityType="Self.Voucher" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="VoucherProduct" EntityType="Self.VoucherProduct" Schema="dbo" store:Type="Tables" />
           <AssociationSet Name="FK__Client__IDGender__398D8EEE" Association="Self.FK__Client__IDGender__398D8EEE">
             <End Role="Gender" EntitySet="Gender" />
             <End Role="Client" EntitySet="Client" />
-          </AssociationSet>
-          <AssociationSet Name="FK__Product__IDType__5DCAEF64" Association="Self.FK__Product__IDType__5DCAEF64">
-            <End Role="Type" EntitySet="Type" />
-            <End Role="Product" EntitySet="Product" />
           </AssociationSet>
           <AssociationSet Name="FK__Staff__IDGender__5629CD9C" Association="Self.FK__Staff__IDGender__5629CD9C">
             <End Role="Gender" EntitySet="Gender" />
@@ -307,10 +284,10 @@
             <PropertyRef Name="IDProduct" />
           </Key>
           <Property Name="IDProduct" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="IDType" Type="Int32" Nullable="false" />
           <Property Name="Name" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="Cost" Type="Decimal" Precision="6" Scale="2" Nullable="false" />
-          <NavigationProperty Name="Type" Relationship="Self.FK__Product__IDType__5DCAEF64" FromRole="Product" ToRole="Type" />
+          <Property Name="Picture" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Description" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
           <NavigationProperty Name="VoucherProduct" Relationship="Self.FK__VoucherPr__IDPro__656C112C" FromRole="Product" ToRole="VoucherProduct" />
         </EntityType>
         <EntityType Name="Staff">
@@ -339,14 +316,6 @@
           <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="version" Type="Int32" />
           <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
-        </EntityType>
-        <EntityType Name="Type">
-          <Key>
-            <PropertyRef Name="IDType" />
-          </Key>
-          <Property Name="IDType" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="Name" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
-          <NavigationProperty Name="Product" Relationship="Self.FK__Product__IDType__5DCAEF64" FromRole="Type" ToRole="Product" />
         </EntityType>
         <EntityType Name="Voucher">
           <Key>
@@ -421,18 +390,6 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Product__IDType__5DCAEF64">
-          <End Role="Type" Type="Self.Type" Multiplicity="1" />
-          <End Role="Product" Type="Self.Product" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="Type">
-              <PropertyRef Name="IDType" />
-            </Principal>
-            <Dependent Role="Product">
-              <PropertyRef Name="IDType" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
         <Association Name="FK__VoucherPr__IDPro__656C112C">
           <End Role="Product" Type="Self.Product" Multiplicity="1" />
           <End Role="VoucherProduct" Type="Self.VoucherProduct" Multiplicity="*" />
@@ -469,14 +426,13 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <EntityContainer Name="Entities" annotation:LazyLoadingEnabled="true">
+        <EntityContainer Name="Entities2" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="Client" EntityType="Self.Client" />
           <EntitySet Name="Gender" EntityType="Self.Gender" />
           <EntitySet Name="Position" EntityType="Self.Position" />
           <EntitySet Name="Product" EntityType="Self.Product" />
           <EntitySet Name="Staff" EntityType="Self.Staff" />
           <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" />
-          <EntitySet Name="Type" EntityType="Self.Type" />
           <EntitySet Name="Voucher" EntityType="Self.Voucher" />
           <EntitySet Name="VoucherProduct" EntityType="Self.VoucherProduct" />
           <AssociationSet Name="FK__Client__IDGender__398D8EEE" Association="Self.FK__Client__IDGender__398D8EEE">
@@ -494,10 +450,6 @@
           <AssociationSet Name="FK__Staff__IDPositio__5535A963" Association="Self.FK__Staff__IDPositio__5535A963">
             <End Role="Position" EntitySet="Position" />
             <End Role="Staff" EntitySet="Staff" />
-          </AssociationSet>
-          <AssociationSet Name="FK__Product__IDType__5DCAEF64" Association="Self.FK__Product__IDType__5DCAEF64">
-            <End Role="Type" EntitySet="Type" />
-            <End Role="Product" EntitySet="Product" />
           </AssociationSet>
           <AssociationSet Name="FK__VoucherPr__IDPro__656C112C" Association="Self.FK__VoucherPr__IDPro__656C112C">
             <End Role="Product" EntitySet="Product" />
@@ -558,7 +510,7 @@
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="Хранилище CofeeHouseShurBolDBModelContainer" CdmEntityContainer="Entities">
+        <EntityContainerMapping StorageEntityContainer="Хранилище CofeeHouseShurBolDBModelContainer" CdmEntityContainer="Entities2">
           <EntitySetMapping Name="Client">
             <EntityTypeMapping TypeName="CofeeHouseShurBolDBModel.Client">
               <MappingFragment StoreEntitySet="Client">
@@ -595,9 +547,10 @@
             <EntityTypeMapping TypeName="CofeeHouseShurBolDBModel.Product">
               <MappingFragment StoreEntitySet="Product">
                 <ScalarProperty Name="IDProduct" ColumnName="IDProduct" />
-                <ScalarProperty Name="IDType" ColumnName="IDType" />
                 <ScalarProperty Name="Name" ColumnName="Name" />
                 <ScalarProperty Name="Cost" ColumnName="Cost" />
+                <ScalarProperty Name="Picture" ColumnName="Picture" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
@@ -624,14 +577,6 @@
                 <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
                 <ScalarProperty Name="version" ColumnName="version" />
                 <ScalarProperty Name="definition" ColumnName="definition" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="Type">
-            <EntityTypeMapping TypeName="CofeeHouseShurBolDBModel.Type">
-              <MappingFragment StoreEntitySet="Type">
-                <ScalarProperty Name="IDType" ColumnName="IDType" />
-                <ScalarProperty Name="Name" ColumnName="Name" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

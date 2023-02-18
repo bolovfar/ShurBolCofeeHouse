@@ -21,11 +21,11 @@ namespace ShurBolCofeeHouse.DataBase
         }
     
         public int IDProduct { get; set; }
-        public int IDType { get; set; }
         public string Name { get; set; }
         public decimal Cost { get; set; }
+        public string Picture { get; set; }
+        public string Description { get; set; }
     
-        public virtual Type Type { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<VoucherProduct> VoucherProduct { get; set; }
     }

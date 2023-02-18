@@ -14,6 +14,9 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using ShurBolCofeeHouse.Classes;
 using static ShurBolCofeeHouse.Classes.EntityClass;
+using ShurBolCofeeHouse.Windows;
+using ShurBolCofeeHouse.Pages;
+
 
 namespace ShurBolCofeeHouse.Pages
 {
@@ -30,9 +33,8 @@ namespace ShurBolCofeeHouse.Pages
         private void LbReg_MouseLeftButtonUp(object sender, MouseButtonEventArgs e)
         {
             //Преход на окно регистрации.. Пока не работает, не видит фрейм.
-            MessageBox.Show("djfg");
-            MainWindow MW = new MainWindow();
-            MW.AuthRegFrame.Content = new RegistrationPage();
+            MessageBox.Show("Переход");
+            //AuthRegFrame.Content = new RegistrationPage();
         }
 
         private void btnAuth_Click(object sender, RoutedEventArgs e)

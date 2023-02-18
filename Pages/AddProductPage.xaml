@@ -1,0 +1,53 @@
+﻿<Page x:Class="ShurBolCofeeHouse.Pages.AddProductPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:ShurBolCofeeHouse.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="600" d:DesignWidth="400"
+      Title="AddProductPage">
+
+    <Grid>
+        <Border Background="#FF97825D" >
+            <StackPanel HorizontalAlignment="Center"
+                        VerticalAlignment="Center">
+                <TextBlock Text="Добавление продукта"
+                           HorizontalAlignment="Center"
+                           FontSize="25"
+                           FontWeight="DemiBold"
+                           FontFamily="Times New Roman"
+                           ></TextBlock>
+                <TextBox Style="{StaticResource TbLogPas}"
+                         Text="Название"
+                         x:Name="tboxAddProdName"></TextBox>
+                <TextBox Style="{StaticResource TbLogPas}"
+                         Text="Стоимость"
+                         x:Name="tboxAddProdCost"></TextBox>
+                <TextBox Style="{StaticResource TbLogPas}"
+                         Text="Описание"
+                         Height="80"
+                         x:Name="tboxAddProdDesc"></TextBox>
+                <Image   x:Name="imgAddProd"
+                         Height="100"
+                         Width="100"
+                         Margin="0 25 0 0"></Image>
+                <Button x:Name="btnAddImg"
+                        Content="Добавить фото"
+                        Height="25"
+                        Width="150"
+                        Margin="0 25 0 0"
+                        FontFamily="Times New Roman" 
+                        Background="#FFC0A375" 
+                        Click="btnAddImg_Click"
+                        ></Button>
+                <Button x:Name="btnAddProd" 
+                        Content="Добавить" 
+                        Margin="0 50 0 0"
+                        FontFamily="Times New Roman" 
+                        Background="#FFC0A375" 
+                        Click="btnAddProd_Click"></Button>
+            </StackPanel>
+        </Border>
+    </Grid>
+</Page>

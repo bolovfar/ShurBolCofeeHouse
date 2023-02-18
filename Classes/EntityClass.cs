@@ -9,6 +9,6 @@ namespace ShurBolCofeeHouse.Classes
 {
     internal class EntityClass
     {
-        public static Entities Context { get; } = new Entities();
+        public static Entities2 Context { get; } = new Entities2();
     }
 }

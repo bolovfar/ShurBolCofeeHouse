@@ -21,13 +21,16 @@ namespace ShurBolCofeeHouse
     /// </summary>
     public partial class MainWindow : Window
     {
+        
         public MainWindow()
         {
             InitializeComponent();
             //Начальное окно
             // Переход осуществлён на одном окне с помощью страниц... не доделано.
-            AuthRegFrame.Content = new RegistrationPage(); 
+            //AuthRegFrame.Content = new RegistrationPage();
             //AuthRegFrame.Content = new AuthorizationPage();
+            AuthRegFrame.Content = new AddProductPage();
+            
         }
     }
 }
