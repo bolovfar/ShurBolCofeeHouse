@@ -13,6 +13,11 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
+
+using static ShurBolCofeeHouse.Classes.EntityClass;
+using ShurBolCofeeHouse.Windows;
+using ShurBolCofeeHouse.DataBase;
+
 namespace ShurBolCofeeHouse.Pages
 {
     /// <summary>
@@ -23,6 +28,16 @@ namespace ShurBolCofeeHouse.Pages
         public ProductPage()
         {
             InitializeComponent();
+            GetProduct();
+        }
+
+        private void GetProduct() 
+        {
+            List<Product> stuffList = new List<Product>();
+
+            stuffList = Context.Product.ToList();
+
+            lvProdList.ItemsSource = stuffList;
         }
     }
 }

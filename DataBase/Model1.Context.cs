@@ -15,10 +15,10 @@ namespace ShurBolCofeeHouse.DataBase
     using System.Data.Entity.Core.Objects;
     using System.Linq;
     
-    public partial class Entities2 : DbContext
+    public partial class Entities : DbContext
     {
-        public Entities2()
-            : base("name=Entities2")
+        public Entities()
+            : base("name=Entities")
         {
         }
     
