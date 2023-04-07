@@ -95,9 +95,11 @@
                            ></TextBlock>
                     <TextBox Template="{DynamicResource TextBoxTemplate1}" Style="{DynamicResource TbLogPas}"
                          Text="Логин"
+                            MouseLeftButtonUp="tboxAuthLogin_MouseLeftButtonUp"
                          x:Name="tboxAuthLogin"></TextBox>
                     <TextBox Template="{DynamicResource TextBoxTemplate1}" Style="{StaticResource TbLogPas}"
                          Text="Пароль"
+                             MouseLeftButtonUp="tboxAuthPas_MouseLeftButtonUp"
                          x:Name="tboxAuthPas"></TextBox>
                     <Button Style="{DynamicResource ButtonStyle1}"  x:Name="btnAuth" Content="Войти" Margin="0 50 0 0" FontFamily="Times New Roman" Background="#FFC0A375" Click="btnAuth_Click"></Button>
                     <Label Content="Нет аккаунта? Регистрация"

@@ -7,6 +7,6 @@
         mc:Ignorable="d"
         Title="StaffWindow" Height="450" Width="800">
     <Grid>
-        
+        <TextBlock Text="Сотрудник" FontSize="24"/>
     </Grid>
 </Window>
