@@ -127,6 +127,9 @@
     <Compile Include="Pages\StaffPage.xaml.cs">
       <DependentUpon>StaffPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Windows\AddEditStaff.xaml.cs">
+      <DependentUpon>AddEditStaff.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Windows\ClientWindow.xaml.cs">
       <DependentUpon>ClientWindow.xaml</DependentUpon>
     </Compile>
@@ -156,6 +159,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Pages\StaffPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\AddEditStaff.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

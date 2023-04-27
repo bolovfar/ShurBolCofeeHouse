@@ -12,6 +12,9 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using ShurBolCofeeHouse.Classes;
+using ShurBolCofeeHouse.Windows;
+using static ShurBolCofeeHouse.Classes.EntityClass;
 
 namespace ShurBolCofeeHouse.Pages
 {
@@ -23,6 +26,7 @@ namespace ShurBolCofeeHouse.Pages
         public ClientPage()
         {
             InitializeComponent();
+            DG.ItemsSource = Context.Client.ToList();
         }
     }
 }

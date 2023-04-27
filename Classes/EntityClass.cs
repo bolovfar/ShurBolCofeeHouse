@@ -10,5 +10,7 @@ namespace ShurBolCofeeHouse.Classes
     internal class EntityClass
     {
         public static Entities Context { get; } = new Entities();
+        public static int IDChange = 0;
+        public static bool Change = false;
     }
 }

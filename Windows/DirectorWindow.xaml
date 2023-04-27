@@ -7,6 +7,51 @@
         mc:Ignorable="d"
         Title="DirectorWindow" Height="450" Width="800">
     <Grid>
-        <TextBlock Text="Директор" FontSize="24"/> 
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50"/>
+            <RowDefinition/>
+            <RowDefinition Height="50"/>
+        </Grid.RowDefinitions>
+        <WrapPanel HorizontalAlignment="Center"  >
+            <Button x:Name="btnStaff"
+                    Width="100"
+                    Margin="10"
+                    Content="Сотрудники" 
+                    Click="btn_Click"/>
+            <Button x:Name="btnProduct"
+                    Margin="10"
+                    Width="100"
+                    Content="Продукты"
+                    Click="btn_Click"/>
+            <Button x:Name="btnClient"
+                    Margin="10"
+                    Width="100"
+                    Content="Клиенты"
+                    Click="btn_Click"/>
+        </WrapPanel>
+
+        <WrapPanel HorizontalAlignment="Center" Grid.Row="2">
+            <Button x:Name="btnDel"
+                    Width="100"
+                    Margin="10"
+                    Content="Удалить" Click="btnDel_Click"/>
+            <Button x:Name="btnAdd"
+                    Margin="10"
+                    Width="100"
+                    Content="Добавить"
+                    Click="btnEdit_Click"/>
+            <Button x:Name="btnEdit"
+                    Margin="10"
+                    Width="100"
+                    Content="Изменить" 
+                    Click="btnEdit_Click"/>
+        </WrapPanel>
+        
+        <Frame Name="DirectorFrame"
+               Grid.Row="1"
+               NavigationUIVisibility="Hidden">
+
+
+        </Frame>
     </Grid>
 </Window>

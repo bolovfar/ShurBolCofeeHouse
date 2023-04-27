@@ -12,6 +12,9 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using ShurBolCofeeHouse.Classes;
+using ShurBolCofeeHouse.Windows;
+using static ShurBolCofeeHouse.Classes.EntityClass;
 
 namespace ShurBolCofeeHouse.Pages
 {
@@ -23,6 +26,13 @@ namespace ShurBolCofeeHouse.Pages
         public StaffPage()
         {
             InitializeComponent();
+            DG.ItemsSource = Context.Staff.ToList();
+        }
+
+        private void DG_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            TextBlock x = DG.Columns[0].GetCellContent(DG.Items[DG.SelectedIndex]) as TextBlock;
+            IDChange = Convert.ToInt32(x?.Text); 
         }
     }
 }
