@@ -25,4 +25,10 @@
 Лист продуктов
 ![image](https://user-images.githubusercontent.com/114148685/220130729-516958f7-3a65-4a02-8b56-f021b0d3416a.png)
 
+Авторизация админа
+![image](https://user-images.githubusercontent.com/114148685/236195820-c24a2c7b-c7e2-4184-a33d-2d5b8974733b.png)
+![image](https://user-images.githubusercontent.com/114148685/236195908-8acd9c57-0d8d-4d0f-85e9-d0471a35c1ce.png)
+
+Добавление
+![image](https://user-images.githubusercontent.com/114148685/236197288-78edb727-fb2a-42f6-bd56-66ed2b16d449.png)
 
