@@ -22,5 +22,7 @@
 ![image](https://user-images.githubusercontent.com/114148685/219851606-2fa69aa4-0595-47db-b8a9-7fb8f68496bc.png)
 ![image](https://user-images.githubusercontent.com/114148685/219851701-8f867a35-7fa3-4515-8937-a57ebd4470fc.png)
 ![image](https://user-images.githubusercontent.com/114148685/219851732-4a457c7f-8ab8-4f12-92a0-db1679f3f303.png)
+Лист продуктов
+![image](https://user-images.githubusercontent.com/114148685/220130729-516958f7-3a65-4a02-8b56-f021b0d3416a.png)
 
 
