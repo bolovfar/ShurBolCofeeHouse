@@ -28,5 +28,11 @@ namespace ShurBolCofeeHouse.Pages
             InitializeComponent();
             DG.ItemsSource = Context.Client.ToList();
         }
+
+        private void DG_SelectionChanged_1(object sender, SelectionChangedEventArgs e)
+        {
+            TextBlock x = DG.Columns[0].GetCellContent(DG.Items[DG.SelectedIndex]) as TextBlock;
+            IDChange = Convert.ToInt32(x?.Text);
+        }
     }
 }

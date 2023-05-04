@@ -10,24 +10,19 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
+using System.Windows.Navigation;
 using System.Windows.Shapes;
-using ShurBolCofeeHouse.Pages;
 
-using ShurBolCofeeHouse.Classes;
-using ShurBolCofeeHouse.DataBase;
-using static ShurBolCofeeHouse.Classes.EntityClass;
-
-namespace ShurBolCofeeHouse.Windows
+namespace ShurBolCofeeHouse.Pages
 {
     /// <summary>
-    /// Логика взаимодействия для ClientWindow.xaml
+    /// Логика взаимодействия для BasketPage.xaml
     /// </summary>
-    public partial class ClientWindow : Window
+    public partial class BasketPage : Page
     {
-        public ClientWindow()
+        public BasketPage()
         {
             InitializeComponent();
-            ClientFrame.Content = new ProductPage();
         }
     }
 }

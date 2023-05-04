@@ -1,0 +1,41 @@
+﻿<Window x:Class="ShurBolCofeeHouse.Windows.AddEditProduct"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ShurBolCofeeHouse.Windows"
+        mc:Ignorable="d"
+        Title="AddEditProduct" Height="400" Width="400">
+    <Grid Background="White">
+        <Border Background="#FF97825D" >
+            <StackPanel HorizontalAlignment="Center"
+                        VerticalAlignment="Center">
+                <TextBlock Text="Идентификатор"></TextBlock>
+                <TextBox Style="{StaticResource TbLogPas}"
+                         Margin="0 10 0 0"
+                         x:Name="tbID"></TextBox>
+
+                <TextBlock Text="Название"
+                           Margin="0 20 0 0"></TextBlock>
+                <TextBox Style="{StaticResource TbLogPas}"
+                         Margin="0 10 0 0"
+                         x:Name="tbName"></TextBox>
+
+                <TextBlock Text="Цена"
+                           Margin="0 20 0 0"></TextBlock>
+                <TextBox Style="{StaticResource TbLogPas}"
+                         Margin="0 10 0 0"
+                         x:Name="tbCost"></TextBox>
+
+                <TextBlock Text="Описание"
+                           Margin="0 20 0 0"></TextBlock>
+                <TextBox Style="{StaticResource TbLogPas}"
+                         Margin="0 10 0 0"
+                         x:Name="tbDescr"></TextBox>
+
+
+                <Button x:Name="btnSave" Content="Подтвердить" Margin="0 40 0 0" FontFamily="Times New Roman" Background="#FFC0A375" Click="btnSave_Click"></Button>
+            </StackPanel>
+        </Border>
+    </Grid>
+</Window>

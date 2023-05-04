@@ -9,7 +9,7 @@
       Title="ClientPage">
 
     <Grid>
-        <DataGrid x:Name="DG" AutoGenerateColumns="False">
+        <DataGrid x:Name="DG" AutoGenerateColumns="False" SelectionChanged="DG_SelectionChanged_1">
             <DataGrid.Columns>
                 <DataGridTextColumn Header="ID" Binding="{Binding IDClient}"/>
                 <DataGridTextColumn Header="Gender" Binding="{Binding Gender.Name}"/>

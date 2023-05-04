@@ -58,16 +58,18 @@ namespace ShurBolCofeeHouse.Windows
 
             switch (pageNow)
             {
-                //case "Клиенты":
-                //    DirectorFrame.Content = new pgChAddClient();
-                //    break;
+                case "Клиенты":
+                    AddEditClient clt = new AddEditClient();
+                    clt.Show();
+                    break;
                 case "Сотрудники":
                     AddEditStaff aes = new AddEditStaff();
                     aes.Show();
                     break;
-               // case "Продукты":
-               //     DirectorFrame.Content = new pgChAddProduct();
-               //     break;
+                case "Продукты":
+                    AddEditProduct aep = new AddEditProduct();
+                    aep.Show();
+                    break;
             }
         }
 

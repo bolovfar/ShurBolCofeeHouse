@@ -115,6 +115,9 @@
     <Compile Include="Pages\AddProductPage.xaml.cs">
       <DependentUpon>AddProductPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Pages\BasketPage.xaml.cs">
+      <DependentUpon>BasketPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Pages\CartPage.xaml.cs">
       <DependentUpon>CartPage.xaml</DependentUpon>
     </Compile>
@@ -126,6 +129,12 @@
     </Compile>
     <Compile Include="Pages\StaffPage.xaml.cs">
       <DependentUpon>StaffPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\AddEditClient.xaml.cs">
+      <DependentUpon>AddEditClient.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\AddEditProduct.xaml.cs">
+      <DependentUpon>AddEditProduct.xaml</DependentUpon>
     </Compile>
     <Compile Include="Windows\AddEditStaff.xaml.cs">
       <DependentUpon>AddEditStaff.xaml</DependentUpon>
@@ -146,6 +155,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Pages\BasketPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Pages\CartPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -159,6 +172,14 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Pages\StaffPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\AddEditClient.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\AddEditProduct.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

@@ -7,6 +7,9 @@
         mc:Ignorable="d"
         Title="ClientWindow" Height="450" Width="800">
     <Grid>
-        <TextBlock Text="Клиент" FontSize="25"/> 
+        <Frame Name="ClientFrame"
+               Grid.Row="1"
+               NavigationUIVisibility="Hidden">
+        </Frame>
     </Grid>
 </Window>
